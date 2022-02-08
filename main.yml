@@ -2,7 +2,7 @@
 - hosts: linux:children
   tasks:
     - name: Installer Apache & Php7
-      ansible.builtin.apt: name=apache2 state=present update_cache=true
+      ansible.builtin.apt: name=apache2 state=present
       loop:
       - apache2
       - libapache2-mod-php7.4
@@ -26,7 +26,7 @@
 
     - name: Installer Httpd
       ansible.builtin.dnf:
-        name=httpd state=present update_cache=true
+        name=httpd state=present
       when: ansible_facts['os_family'] == 'RedHat'
 
     - name: Installer Php7
@@ -49,3 +49,8 @@
       ansible.builtin.service:
         name: apache2
         state: restarted
+
+  vars_files:
+    - firewall.yaml
+  roles :
+    - { role: geerlingguy.firewall }
