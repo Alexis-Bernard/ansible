@@ -1,0 +1,9 @@
+Listen {{ansible_default_ipv4['address']}}:8080
+
+<IfModule ssl_module>
+Listen   {{ansible_default_ipv4['address']}}:443
+</IfModule>
+
+<IfModule mod_gnutls.c>
+Listen   {{ansible_default_ipv4['address']}}:443
+</IfModule>

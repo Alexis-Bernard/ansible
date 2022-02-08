@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: docker-topo
+Version: 2.0.3
+Summary: Docker network topology builder
+Home-page: https://github.com/networkop/docker-topo
+Author: Michael Kashin
+Author-email: mmkashin@gmail.com
+License: BSD3
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5

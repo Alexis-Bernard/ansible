@@ -1,0 +1,7 @@
+---
+ansible_connection: ansible.netcommon.network_cli
+ansible_network_os: arista.eos.eos
+ansible_user: aaa
+ansible_password: mdp
+ansible_become: yes
+ansible_become_method: enable
